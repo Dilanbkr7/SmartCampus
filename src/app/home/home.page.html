@@ -1,21 +1,63 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title> Blank </ion-title>
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>SmartCampus</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>
-      Start with Ionic
-      <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a>
+  <div class="bienvenida">
+    <ion-icon name="school-outline"></ion-icon>
+    <p>BIENVENIDO A SMARTCAMPUS</p>
+    <h1>¡Hola, estudiante!</h1>
+    <p class="descripcion">
+      Administra tus actividades académicas
+      y mantente organizado.
     </p>
   </div>
+
+  <div class="fecha">
+    <ion-icon name="calendar-outline"></ion-icon>
+    {{ fecha | date:'fullDate' }}
+  </div>
+
+  <h2>Panel principal</h2>
+
+  <div class="grid-menu">
+
+    <ion-card routerLink="/tabs/activities">
+      <ion-card-content>
+        <ion-icon name="book-outline" color="primary"></ion-icon>
+        <h3>Actividades</h3>
+        <p>Gestiona tus tareas</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card routerLink="/tabs/users">
+      <ion-card-content>
+        <ion-icon name="people-outline" color="success"></ion-icon>
+        <h3>Usuarios</h3>
+        <p>Consulta usuarios</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card routerLink="/tabs/device">
+      <ion-card-content>
+        <ion-icon name="phone-portrait-outline" color="tertiary"></ion-icon>
+        <h3>Dispositivo</h3>
+        <p>Sensores y almacenamiento</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card routerLink="/tabs/activities">
+      <ion-card-content>
+        <ion-icon name="calendar-outline" color="warning"></ion-icon>
+        <h3>Mi espacio</h3>
+        <p>Organiza tu día</p>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
 </ion-content>
